@@ -1,0 +1,32 @@
+{
+  "name": "Qnet_stat_worker",
+  "description": "Qnet_stat_worker",
+  "version": "0.0.1",
+  "author": "Cuong VX <cuongvx@gviet.vn>",
+  "private": true,
+  "keywords": [
+    "node",
+    "statistic"
+  ],
+  "dependencies": {
+    "soap": "*",
+    "axios": "^0.18.1",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cron": "^1.7.1",
+    "express": "^4.17.1",
+    "ioredis": "^4.14.0",
+    "lodash": "^4.17.15",
+    "md5": "^2.2.1",
+    "moment": "^2.22.0",
+    "mongodb": "^3.3.2",
+    "nodemailer": "^6.3.0",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "request": "^2.88.0",
+    "soap": "^0.30.0",
+    "unirest": "^0.6.0",
+    "validatorjs": "^3.17.1",
+    "xml-js": "^1.6.11"
+  }
+}

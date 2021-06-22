@@ -1,0 +1,50 @@
+[
+  {
+    "name": "vasMobifone",
+    "script": "server.js",
+    "error_file": "./log/vasMobifone-err.log",
+    "out_file": "./log/vasMobifone-out.log",
+    "pid_file": "./log/vasMobifone.pid",
+    "watch": [
+      "common",
+      "config",
+      "handler",
+      "writeLog",
+      "server.js"
+    ],
+    "exec_mode": "cluster_mode",
+    //fork_mode
+    "max_memory_restart": "200M",
+    "env": {
+      "NODE_ENV": "production",
+      "module": "api",
+      "port": 8003
+    }
+  },
+  {
+    "name": "promoAll",
+    "script": "./cron/promoAll.js",
+    "error_file": "./log/promoAll-err.log",
+    "out_file": "./log/promoAll-out.log",
+    "pid_file": "./log/promoAll.pid",
+    "watch": false,
+    "exec_mode": "fork_mode",
+    "max_memory_restart": "200M",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  {
+    "name": "promo202008",
+    "script": "./cron/promo202008.js",
+    "error_file": "./log/promo202008-err.log",
+    "out_file": "./log/promo202008-out.log",
+    "pid_file": "./log/promo202008.pid",
+    "watch": false,
+    "exec_mode": "fork_mode",
+    "max_memory_restart": "200M",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+]

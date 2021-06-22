@@ -1,0 +1,20 @@
+Request:
+ @POST
+  @Path("updatePackage")
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response updatePackage(@Context HttpServletRequest req, @FormParam("isdn") String isdn,
+      @FormParam("seviceCode") String seviceCode, @FormParam("groupCode") String groupCode,
+      @FormParam("packageCode") String packageCode, @FormParam("regDatetime") String regDatetime,
+      @FormParam("staDatetime") String staDatetime, @FormParam("endDatetime") String endDatetime,
+      @FormParam("expireDatetime") String expireDatetime, @FormParam("status") String status, 
+      @FormParam("channel") String channel, @FormParam("charge_price") String charge_price,
+      @FormParam("message_send") String message_send, @FormParam("org_request") String org_request) {
+    JSONObject jsonData = new JSONObject();
+    jsonData.put("resultCode", "1");
+    jsonData.put("result", "OK");
+
+    return Response.ok(jsonData.toString()).build();
+  }
+
+Response dang JSON:   
+{"resultCode":"1","result":"OK"}
